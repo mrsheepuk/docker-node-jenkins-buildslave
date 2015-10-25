@@ -1,4 +1,4 @@
-FROM node:4.1
+FROM node:latest
 
 RUN apt-get update && apt-get install -y openssh-server
 RUN sed -i 's|session    required     pam_loginuid.so|session    optional     pam_loginuid.so|g' /etc/pam.d/sshd
